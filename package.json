@@ -1,0 +1,21 @@
+{
+  "name": "cfw-mock",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler publish",
+    "dev": "wrangler dev --local",
+    "dev:staging": "wrangler dev",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' vitest run"
+  },
+  "dependencies": {
+    "hono": "^3.2.5"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230419.0",
+    "typescript": "^5.0.4",
+    "vitest": "^0.32.2",
+    "vitest-environment-miniflare": "^2.14.0",
+    "wrangler": "^3.1.0"
+  }
+}
