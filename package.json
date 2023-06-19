@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "build": "esbuild ./src/worker.ts --outdir='./dist' --bundle --minify --tree-shaking --format='esm' --target='esnext' --platform='browser'",
     "deploy": "wrangler publish",
     "dev": "wrangler dev --local",
     "dev:staging": "wrangler dev",
@@ -13,6 +14,9 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20230419.0",
+    "esbuild": "^0.18.4",
+    "get-port": "^7.0.0",
+    "miniflare": "^3.0.1",
     "typescript": "^5.0.4",
     "vitest": "^0.32.2",
     "vitest-environment-miniflare": "^2.14.0",

@@ -1,3 +1,6 @@
 name = "cfw-mock"
-main = "src/worker.ts"
+main = "dist/worker.js"
 compatibility_date = "2023-06-16"
+
+[build]
+command = "npm run build"
